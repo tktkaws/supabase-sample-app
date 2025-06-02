@@ -2,9 +2,9 @@
 
 import { createClient } from "./utils/supabase/server";
 
-import { Database } from "../types/database.types";
+// import { Database } from "../types/database.types";
 
-type Todo = Database["public"]["Tables"]["todos"]["Row"];
+// type Todo = Database["public"]["Tables"]["todos"]["Row"];
 
 export async function getTodos() {
   const supabase = await createClient();
