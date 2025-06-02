@@ -27,8 +27,8 @@ const Page = async () => {
           {todos.map(todo => (
             <li key={todo.id}>
               <form action={updateData}>
-                <input type="hidden" name="id" value={todo.id} />
-                <input type="text" name="text" defaultValue={todo.text} />
+                <input type="hidden" name="id" value={todo.id?.toString()} />
+                <input type="text" name="text" defaultValue={todo.text || ''} />
                 <button type="submit">更新</button>
               </form>
             </li>
