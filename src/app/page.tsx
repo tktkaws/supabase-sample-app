@@ -7,7 +7,7 @@ import { Database } from "@/types/database.types";
 
 type Todo = Database["public"]["Tables"]["todos"]["Row"];
 
-export default function Home() {
+function TodoList() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [newTodo, setNewTodo] = useState("");
   const [editingId, setEditingId] = useState<number | null>(null);
@@ -36,7 +36,7 @@ export default function Home() {
     };
 
     fetchTodos();
-  }, []);
+  }, [supabase]);
 
   const handleAddTodo = async () => {
     if (newTodo.trim()) {
@@ -162,6 +162,17 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </main>
+    </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <div className={styles.page}>
+      <main className={styles.main}>
+        <h1>Todoリスト</h1>
+        <TodoList />
       </main>
     </div>
   );
