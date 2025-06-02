@@ -11,9 +11,11 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
+  padding: 2rem;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,7 +32,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
   grid-row-start: 2;
 }
 
@@ -165,4 +167,121 @@ a.secondary {
   .logo {
     filter: invert();
   }
+}
+
+.addTodo {
+  display: flex;
+  gap: 1rem;
+}
+
+.addTodo input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addTodo button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addTodo button:hover {
+  background-color: #0051a2;
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.todoText {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.todoButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editInput {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.editButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todoButtons button,
+.editButtons button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.todoButtons button:first-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.todoButtons button:first-child:hover {
+  background-color: #45a049;
+}
+
+.todoButtons button:last-child {
+  background-color: #ff4444;
+  color: white;
+}
+
+.todoButtons button:last-child:hover {
+  background-color: #cc0000;
+}
+
+.editButtons button:first-child {
+  background-color: #2196F3;
+  color: white;
+}
+
+.editButtons button:first-child:hover {
+  background-color: #1976D2;
+}
+
+.editButtons button:last-child {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+.editButtons button:last-child:hover {
+  background-color: #757575;
+}
+
+.todoId {
+  min-width: 60px;
+  font-size: 0.9rem;
+  color: #666;
+  font-family: monospace;
 }
